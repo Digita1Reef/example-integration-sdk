@@ -38,3 +38,4 @@ yarn-error.*
 
 # generated native folders
 /android/build
+libs/react-native-iu-library/android/build

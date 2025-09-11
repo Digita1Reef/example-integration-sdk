@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		096E22F8280078A0004CF467 /* DigitalReefSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096E22F7280078A0004CF467 /* DigitalReefSDK.xcframework */; };
+		09E8C79F281FFFA300F254C7 /* PushEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E8C799281FFFA300F254C7 /* PushEvents.m */; };
+		09E8C7A0281FFFA300F254C7 /* RNDigitalReefSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E8C79A281FFFA300F254C7 /* RNDigitalReefSDK.m */; };
+		09E8C7A1281FFFA300F254C7 /* Initialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E8C79C281FFFA300F254C7 /* Initialize.m */; };
+		09E8C7A428200CF500F254C7 /* Initialize.h in Sources */ = {isa = PBXBuildFile; fileRef = 09E8C79B281FFFA300F254C7 /* Initialize.h */; };
+		09E8C7A528200CF500F254C7 /* PushEvents.h in Sources */ = {isa = PBXBuildFile; fileRef = 09E8C79E281FFFA300F254C7 /* PushEvents.h */; };
+		09E8C7A628200CF500F254C7 /* RNDigitalReefSDK.h in Sources */ = {isa = PBXBuildFile; fileRef = 09E8C79D281FFFA300F254C7 /* RNDigitalReefSDK.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		09C715DA27F61BF70040D4A0 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		096E22F7280078A0004CF467 /* DigitalReefSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = DigitalReefSDK.xcframework; sourceTree = "<group>"; };
+		09C715DC27F61BF70040D4A0 /* libRCTDigitalReef.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTDigitalReef.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		09E8C799281FFFA300F254C7 /* PushEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushEvents.m; sourceTree = "<group>"; };
+		09E8C79A281FFFA300F254C7 /* RNDigitalReefSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNDigitalReefSDK.m; sourceTree = "<group>"; };
+		09E8C79B281FFFA300F254C7 /* Initialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Initialize.h; sourceTree = "<group>"; };
+		09E8C79C281FFFA300F254C7 /* Initialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Initialize.m; sourceTree = "<group>"; };
+		09E8C79D281FFFA300F254C7 /* RNDigitalReefSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNDigitalReefSDK.h; sourceTree = "<group>"; };
+		09E8C79E281FFFA300F254C7 /* PushEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushEvents.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09C715D927F61BF70040D4A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				096E22F8280078A0004CF467 /* DigitalReefSDK.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0962B94F27F61E1600C726A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				096E22F7280078A0004CF467 /* DigitalReefSDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09C715D327F61BF70040D4A0 = {
+			isa = PBXGroup;
+			children = (
+				09E8C79B281FFFA300F254C7 /* Initialize.h */,
+				09E8C79C281FFFA300F254C7 /* Initialize.m */,
+				09E8C79E281FFFA300F254C7 /* PushEvents.h */,
+				09E8C79D281FFFA300F254C7 /* RNDigitalReefSDK.h */,
+				09E8C799281FFFA300F254C7 /* PushEvents.m */,
+				09E8C79A281FFFA300F254C7 /* RNDigitalReefSDK.m */,
+				09C715DD27F61BF70040D4A0 /* Products */,
+				0962B94F27F61E1600C726A5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		09C715DD27F61BF70040D4A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09C715DC27F61BF70040D4A0 /* libRCTDigitalReef.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09C715DB27F61BF70040D4A0 /* RCTDigitalReef */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09C715E527F61BF70040D4A0 /* Build configuration list for PBXNativeTarget "RCTDigitalReef" */;
+			buildPhases = (
+				09C715D827F61BF70040D4A0 /* Sources */,
+				09C715D927F61BF70040D4A0 /* Frameworks */,
+				09C715DA27F61BF70040D4A0 /* Copy Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RCTDigitalReef;
+			productName = RCTDigitalReef;
+			productReference = 09C715DC27F61BF70040D4A0 /* libRCTDigitalReef.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09C715D427F61BF70040D4A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					09C715DB27F61BF70040D4A0 = {
+						CreatedOnToolsVersion = 13.2;
+					};
+				};
+			};
+			buildConfigurationList = 09C715D727F61BF70040D4A0 /* Build configuration list for PBXProject "RCTDigitalReef" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 09C715D327F61BF70040D4A0;
+			productRefGroup = 09C715DD27F61BF70040D4A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09C715DB27F61BF70040D4A0 /* RCTDigitalReef */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09C715D827F61BF70040D4A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E8C7A428200CF500F254C7 /* Initialize.h in Sources */,
+				09E8C7A528200CF500F254C7 /* PushEvents.h in Sources */,
+				09E8C7A628200CF500F254C7 /* RNDigitalReefSDK.h in Sources */,
+				09E8C79F281FFFA300F254C7 /* PushEvents.m in Sources */,
+				09E8C7A0281FFFA300F254C7 /* RNDigitalReefSDK.m in Sources */,
+				09E8C7A1281FFFA300F254C7 /* Initialize.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		09C715E327F61BF70040D4A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		09C715E427F61BF70040D4A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		09C715E627F61BF70040D4A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H55Q92ANPH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"$(PROJECT_DIR)/**",
+					"$(BUILD_DIR)/Debug$(EFFECTIVE_PLATFORM_NAME)/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		09C715E727F61BF70040D4A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H55Q92ANPH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"$(PROJECT_DIR)/**",
+					"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09C715D727F61BF70040D4A0 /* Build configuration list for PBXProject "RCTDigitalReef" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09C715E327F61BF70040D4A0 /* Debug */,
+				09C715E427F61BF70040D4A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09C715E527F61BF70040D4A0 /* Build configuration list for PBXNativeTarget "RCTDigitalReef" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09C715E627F61BF70040D4A0 /* Debug */,
+				09C715E727F61BF70040D4A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09C715D427F61BF70040D4A0 /* Project object */;
+}

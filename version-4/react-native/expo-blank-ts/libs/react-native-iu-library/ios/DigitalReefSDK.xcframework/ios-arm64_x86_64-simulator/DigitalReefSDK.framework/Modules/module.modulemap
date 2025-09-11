@@ -1,0 +1,11 @@
+framework module DigitalReefSDK {
+  umbrella header "DigitalReefSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module DigitalReefSDK.Swift {
+  header "DigitalReefSDK-Swift.h"
+  requires objc
+}

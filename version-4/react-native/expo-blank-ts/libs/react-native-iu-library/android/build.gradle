@@ -1,0 +1,82 @@
+// android/build.gradle
+
+def DEFAULT_COMPILE_SDK_VERSION = 35
+def DEFAULT_BUILD_TOOLS_VERSION = '31.0.0'
+def DEFAULT_MIN_SDK_VERSION = 21
+def DEFAULT_TARGET_SDK_VERSION = 35
+
+def safeExtGet(prop, fallback) {
+    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+buildscript {
+    if (project == rootProject) {
+        repositories {
+            google()
+            jcenter()
+        }
+        dependencies {
+            classpath 'com.android.tools.build:gradle:4.1.3'
+        }
+    }
+}
+
+android {
+    compileSdkVersion safeExtGet('compileSdkVersion', DEFAULT_COMPILE_SDK_VERSION)
+    buildToolsVersion safeExtGet('buildToolsVersion', DEFAULT_BUILD_TOOLS_VERSION)
+
+    defaultConfig {
+        minSdkVersion safeExtGet('minSdkVersion', DEFAULT_MIN_SDK_VERSION)
+        targetSdkVersion safeExtGet('targetSdkVersion', DEFAULT_TARGET_SDK_VERSION)
+        versionCode 1
+        versionName "1.0"
+
+        consumerProguardFiles "consumer-proguard-rules.pro"
+    }
+
+    lintOptions { abortOnError false }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation "com.facebook.react:react-native:${rootProject.findProperty('android.reactNativeVersion') ?: findProperty('android.reactNativeVersion')}"
+
+    // Material
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    // GSON
+    implementation 'com.google.code.gson:gson:2.9.0'
+    // Room
+    implementation 'androidx.room:room-runtime:2.5.1'
+    annotationProcessor 'androidx.room:room-compiler:2.5.1'
+    // OkHttp
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+    // Dynamic Animation
+    implementation 'androidx.dynamicanimation:dynamicanimation:1.0.0'
+
+    // Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:33.3.0')
+    implementation 'com.google.firebase:firebase-config'
+    implementation 'com.google.firebase:firebase-analytics'
+
+    // Play Services
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+    implementation 'com.google.android.gms:play-services-location:21.3.0'
+
+    implementation "androidx.work:work-runtime:2.8.1"
+
+    implementation('com.google.firebase:firebase-messaging') {
+        exclude group: 'org.json', module: 'json'
+    }
+
+    implementation files("$projectDir/libs/amlibrary-prod-sdk-sap-sendata-nogl-release-4-28-7.aar")
+
+    api "com.google.android.play:review:2.0.1"
+}
