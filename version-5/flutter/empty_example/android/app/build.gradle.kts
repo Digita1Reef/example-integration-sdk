@@ -42,3 +42,7 @@ android {
 flutter {
     source = "../.."
 }
+
+dependencies {
+    implementation("com.digitalreef.phoenix:helios:5.8.1")
+}
