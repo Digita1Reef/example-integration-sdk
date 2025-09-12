@@ -62,6 +62,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.0.0"
+  flutter_plugin_android_lifecycle:
+    dependency: transitive
+    description:
+      name: flutter_plugin_android_lifecycle
+      sha256: b0694b7fb1689b0e6cc193b3f1fcac6423c4f93c74fb20b806c6b6f196db0c31
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.30"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -131,6 +139,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.1"
+  plugin_platform_interface:
+    dependency: transitive
+    description:
+      name: plugin_platform_interface
+      sha256: "4820fbfdb9478b1ebae27888254d445073732dae3d6ea81f0b7e06d5dedc3f02"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.8"
+  siprocalsdk_helios:
+    dependency: "direct main"
+    description:
+      name: siprocalsdk_helios
+      sha256: "7566cb5b87d1eb63694d9eaca7ce4376b5534d0d7cd27c9e9ab7c29e9cc37655"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.8.1"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -202,4 +226,4 @@ packages:
     version: "15.0.2"
 sdks:
   dart: ">=3.9.2 <4.0.0"
-  flutter: ">=3.18.0-18.0.pre.54"
+  flutter: ">=3.29.0"
