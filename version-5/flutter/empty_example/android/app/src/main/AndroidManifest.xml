@@ -1,4 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!--Required
+    from Android 13 onwards to receive notifications-->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" /> <!--Required
+    to capture Advertising Id-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:label="empty_example"
         android:name=".MainApplication"
