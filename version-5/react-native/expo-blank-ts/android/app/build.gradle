@@ -89,7 +89,7 @@ android {
 
     namespace 'com.anonymous.expoblankts'
     defaultConfig {
-        applicationId 'com.anonymous.expoblankts'
+        applicationId 'com.siprocalsdk.appdemo'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
