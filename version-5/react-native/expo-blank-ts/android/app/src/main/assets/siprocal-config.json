@@ -1,7 +1,7 @@
 {
   "organizationType": "static",
-  "organization": "IU",
-  "organizationId": "5a294f81993c8f1570c2550d",
+  "organization": "Siprocal",
+  "organizationId": "65b90bd1680f9a006995b76f",
   "timerTriggerConfig": 86400,
   "timerTriggerDormant": 86400,
   "orgSelection": "",
