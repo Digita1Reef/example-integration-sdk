@@ -130,6 +130,12 @@ android {
     androidResources {
         ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~'
     }
+
+    repositories {
+        flatDir {
+            dirs "../../node_modules/react-native-iu-library/android/libs"
+        }
+    }
 }
 
 // Apply static values from `gradle.properties` to the `android.packagingOptions`
@@ -152,7 +158,14 @@ android {
     }
 }
 
+repositories { 
+    flatDir {
+        dirs 'libs'
+    }
+}
+
 dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
 
