@@ -1,7 +1,8 @@
 allprojects {
     repositories {
         google()
-        mavenCentral()
+        mavenCentral() // Já incluído não é necessário adicionar novamente
+        maven { url = uri("https://www.jitpack.io") }
     }
 }
 
