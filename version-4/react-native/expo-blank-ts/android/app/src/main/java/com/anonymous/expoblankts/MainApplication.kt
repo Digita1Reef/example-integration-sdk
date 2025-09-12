@@ -16,6 +16,11 @@ import com.facebook.react.defaults.DefaultReactNativeHost
 import expo.modules.ApplicationLifecycleDispatcher
 import expo.modules.ReactNativeHostWrapper
 
+import com.facebook.react.ReactInstanceManager
+import com.facebook.react.bridge.ReactApplicationContext
+import com.iu.reactlibrary.IuLibraryModule
+
+
 class MainApplication : Application(), ReactApplication {
 
   override val reactNativeHost: ReactNativeHost = ReactNativeHostWrapper(
@@ -47,6 +52,13 @@ class MainApplication : Application(), ReactApplication {
     }
     loadReactNative(this)
     ApplicationLifecycleDispatcher.onApplicationCreate(this)
+
+    val reactInstanceManager = reactNativeHost.reactInstanceManager
+
+    val context = reactInstanceManager.currentReactContext as? ReactApplicationContext
+    context?.let { reactContext ->
+      IuLibraryModule(this, reactContext, MainActivity::class.java)
+    }
   }
 
   override fun onConfigurationChanged(newConfig: Configuration) {
