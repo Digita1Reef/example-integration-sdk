@@ -1,14 +1,27 @@
-# Add project specific ProGuard rules here.
-# By default, the flags in this file are appended to flags specified
-# in /usr/local/Cellar/android-sdk/24.3.3/tools/proguard/proguard-android.txt
-# You can edit the include path and order by changing the proguardFiles
-# directive in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+-keepattributes Signature
+-keepattributes InnerClasses
+-keepclassmembers enum * {
+    public static **[] values(); public static ** valueOf(java.lang.String);
+}
 
-# react-native-reanimated
--keep class com.swmansion.reanimated.** { *; }
--keep class com.facebook.react.turbomodule.** { *; }
-
-# Add any project specific keep options here:
+-keep class amazonia.iu.com.amlibrary.client.IUConfig { *; }
+-keep class amazonia.iu.com.amlibrary.data.** { *; }
+-keep class amazonia.iu.com.amlibrary.dto.** { *; }
+-keep class amazonia.iu.com.amlibrary.config.AppStateManager { *; }
+-keep class amazonia.iu.com.amlibrary.cache.BaseStorageCache$** { *;}
+-keep class amazonia.iu.com.amlibrary.diagnostics.Command { *; }
+-keep class amazonia.iu.com.amlibrary.diagnostics.Command$** { *; }
+-keep class amazonia.iu.com.amlibrary.instructions.Instruction { *; }
+-keep class amazonia.iu.com.amlibrary.instructions.Instruction$** { *; }
+-keep class android.content.pm.IPackageInstallObserver {*; }
+-keep class amazonia.iu.com.amlibrary.actions.silent.SilentInstallAppFromServerFactory { *; }
+-keep class amazonia.iu.com.amlibrary.vas.VasInfo {*; }
+-keep class amazonia.iu.com.amlibrary.vas.VasAcknowledgementDTO {*; }
+-keep class amazonia.iu.com.amlibrary.vas.VasRequestDTO {*;}
+-keep class amazonia.iu.com.amlibrary.vas.VasResponse {*;}
+-keep class amazonia.iu.com.amlibrary.client.IUApp {*;}
+-keep class amazonia.iu.com.amlibrary.activities.fragment.VideoPlayerFragment{*;}
+-keep class amazonia.iu.com.idmanager.dto.** { *; }
+-keep class amazonia.iu.com.amlibrary.client.OTAPromotionReceiverListener { *; }
+-keep class amazonia.iu.com.amlibrary.client.NotificationsListener { *; }
+-keep class amazonia.iu.com.amlibrary.client.OtaEvent { *; }
