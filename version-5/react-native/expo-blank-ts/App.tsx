@@ -1,20 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { useState } from "react";
+import type { InitializationDataInterface } from "./interfaces/InitializationDataInterface";
+import { SplashScreen } from "./screens/SplashScreen/SplashScreen";
+import MainScreen from "./screens/MainScreen/MainScreen";
 
 export default function App() {
+  const [isInitialized, setIsInitialized] = useState(false);
+  const [initializationData, setInitializationData] =
+    useState<InitializationDataInterface | null>(null);
+
+  const handleInitializationComplete = (data: InitializationDataInterface) => {
+    console.log("🎯 [App] Inicialização concluída:", data);
+    setInitializationData(data);
+    setIsInitialized(true);
+  };
+
+  if (!isInitialized) {
+    return (
+      <>
+        <StatusBar style="light" />
+        <SplashScreen onInitializationComplete={handleInitializationComplete} />
+      </>
+    );
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <StatusBar style="light" />
+      <MainScreen initializationData={initializationData} />
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
