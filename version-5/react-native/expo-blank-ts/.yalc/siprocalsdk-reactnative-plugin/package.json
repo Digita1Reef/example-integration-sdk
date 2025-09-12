@@ -1,0 +1,32 @@
+{
+  "name": "siprocalsdk-reactnative-plugin",
+  "version": "5.8.1",
+  "description": "Plugin for can integrate Siprocal SDK in react native apps",
+  "main": "index.js",
+  "module": "index",
+  "react-native": "index",
+  "source": "index",
+  "keywords": [
+    "react-native",
+    "ios",
+    "android"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com.git"
+  },
+  "author": "Siprocal <melvin.bustamante@siprocal.com> (https://siprocal.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/issues"
+  },
+  "homepage": "https://github.com#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-native": ">=0.79.5"
+  },
+  "yalcSig": "7c03f50b18eaadf74db1ea3033471181"
+}

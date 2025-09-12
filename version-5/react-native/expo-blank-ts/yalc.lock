@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "siprocalsdk-reactnative-plugin": {
+      "signature": "7c03f50b18eaadf74db1ea3033471181",
+      "file": true
+    }
+  }
+}

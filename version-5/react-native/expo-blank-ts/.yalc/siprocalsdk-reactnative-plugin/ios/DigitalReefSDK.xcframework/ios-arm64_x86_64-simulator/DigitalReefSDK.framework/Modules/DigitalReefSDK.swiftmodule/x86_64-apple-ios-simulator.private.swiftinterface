@@ -1,0 +1,386 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name DigitalReefSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import AVFoundation
+import AVKit
+import AdSupport
+import AppTrackingTransparency
+import AuthenticationServices
+import BackgroundTasks
+import Combine
+import CoreLocation
+import CoreMedia
+import CoreTelephony
+import DeveloperToolsSupport
+@_exported import DigitalReefSDK
+import Foundation
+import Foundation/*.Data*/
+import ImageIO
+import Intents
+import Network
+import StoreKit
+import Swift
+import SwiftUI
+import SystemConfiguration
+import UIKit
+import UserNotifications
+import WebKit
+import _AVKit_SwiftUI
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os
+import zlib
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class DigitalReef : ObjectiveC.NSObject, DigitalReefSDK.DebugProtocol {
+  @objc public static let shared: DigitalReefSDK.DigitalReef
+  @objc public var deepLinkDelegate: (any DigitalReefSDK.DeepLinkDelegate)?
+  @objc public func setUp()
+  @objc public static func includeMediaAttachment(request: UserNotifications.UNNotificationRequest, mutableContent: UserNotifications.UNMutableNotificationContent, contentHandler: @escaping ((UserNotifications.UNNotificationContent) -> Swift.Void))
+  @objc public func addOTAObserver(_ otaObserver: any DigitalReefSDK.OTAObserver)
+  @objc public func removeOTAObserver(_ otaObserver: any DigitalReefSDK.OTAObserver)
+  @objc public func notifySDKForOTAEventPerformedInHostApp(otaPromotionId: Swift.String, otaEvent: DigitalReefSDK.OTAEvent)
+  @objc public func requestPushPermission()
+  @objc public static func sendEvent(name: Swift.String)
+  @objc public func requestAppTrackingTransparencyPermission()
+  @objc public func setClientAttributes(attributes: [Swift.String : Swift.String])
+  @objc public func optInToEngagementAds(optIn: Swift.Bool)
+  @objc public func getEngagementAdsOptInStatus() -> Swift.Bool
+  @objc public func optInToMonetizationAds(optIn: Swift.Bool)
+  @objc public func getMonetizationAdsOptInStatus() -> Swift.Bool
+  @objc public func getOrganizationName() -> Swift.String?
+  @objc public func getOrganizationId() -> Swift.String?
+  @objc public func sendHostAppCountryCode(cc: Swift.String)
+  @objc public func didRegisterForRemoteNotificationsWithDeviceToken(_ application: UIKit.UIApplication, deviceToken: Foundation.Data)
+  @objc public func didReceiveRemoteNotification(application: UIKit.UIApplication, userInfo: [Swift.AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIKit.UIBackgroundFetchResult) -> Swift.Void)
+  @objc public func didReceiveNotificationResponse(center: UserNotifications.UNUserNotificationCenter, didReceive response: UserNotifications.UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Swift.Void)
+  @objc public func willPresentNotification(center: UserNotifications.UNUserNotificationCenter, willPresent notification: UserNotifications.UNNotification, withCompletionHandler completionHandler: @escaping (UserNotifications.UNNotificationPresentationOptions) -> Swift.Void)
+  @objc public func readOTAPromotions() -> [DigitalReefSDK.OTAPromotion]
+  @objc public func saveOTAPromotionToDB(otaPromotion: DigitalReefSDK.OTAPromotion)
+  @objc deinit
+}
+@objc public protocol DeepLinkDelegate {
+  @objc func handleDeepLinks(_ link: Foundation.URL, open: (() -> Swift.Void)?)
+}
+public protocol DebugProtocol : ObjectiveC.NSObject {
+  func fetchClientID() -> Swift.String
+  func deviceData() -> Swift.String
+}
+extension DigitalReefSDK.DebugProtocol {
+  public func fetchClientID() -> Swift.String
+  public func deviceData() -> Swift.String
+  public func validateDebugVersion() -> Swift.Bool
+}
+extension DigitalReefSDK.DigitalReef {
+  @objc dynamic public func startLocation()
+  @objc dynamic public func updateLocation()
+  @objc dynamic public func stopLocation()
+  @objc dynamic public var isLocationServiceEnable: Swift.Bool {
+    @objc get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers @_Concurrency.MainActor @preconcurrency public class InAPPUIButton : UIKit.UIButton {
+  @_Concurrency.MainActor @preconcurrency public var inAppContent: DigitalReefSDK.InAppContent?
+  @objc @_Concurrency.MainActor @preconcurrency public var deeplink: Swift.String?
+  @objc @_Concurrency.MainActor @preconcurrency public var ctaType: Swift.String?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @objcMembers public class InitialAd : ObjectiveC.NSObject {
+  @objc public var adId: Swift.String
+  @objc public var campaignId: Swift.String
+  @objc public init(adId: Swift.String, campaignId: Swift.String)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class InAppMessageService : ObjectiveC.NSObject {
+  @objc public static let shared: DigitalReefSDK.InAppMessageService
+  @objc public func saveMessage(_ item: DigitalReefSDK.DRInAppHelper, completion: (() -> Swift.Void)? = nil)
+  @objc public func getLaunchInAppMessages() -> [DigitalReefSDK.DRInAppModel]
+  @objc public func checkInAppAdExists(_ id: Swift.String, adId: Swift.String) -> Swift.Bool
+  @objc public func getPushClickInAppMessages(_ id: Swift.String) -> [DigitalReefSDK.DRInAppModel]
+  @objc public func updateAdShown(_ id: Swift.String, completion: (() -> Swift.Void)? = nil)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class DRInAppHelper : ObjectiveC.NSObject {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class AdAnalyticsManager : ObjectiveC.NSObject {
+  @objc public class func sharedInstance() -> DigitalReefSDK.AdAnalyticsManager
+  @objc public func adBackGroundedAnalytics(adId: Swift.String, campaignId: Swift.String)
+  @objc public func sendAppTerminatedAnalytics(adId: Swift.String, campaignId: Swift.String)
+  @objc public func adShownAnalytics(adId: Swift.String, campaignId: Swift.String)
+  @objc public func adClosedAnalytics(adId: Swift.String, campaignId: Swift.String, hasVideo: Swift.Bool, videoView: DigitalReefSDK.UIVideoView?)
+  @objc public func adClosedWithNewNotification(adId: Swift.String, campaignId: Swift.String, hasVideo: Swift.Bool, videoView: DigitalReefSDK.UIVideoView?)
+  @objc public func adBtnActionAnalytics(adId: Swift.String, campaignId: Swift.String, hasVideo: Swift.Bool, videoView: DigitalReefSDK.UIVideoView?, ctaLink: Swift.String, urlData: Swift.String)
+  @objc public func adContentErrorAdAnalytics(adId: Swift.String, campaignId: Swift.String)
+  @objc public func gifDisplayedAdAnalytics(adId: Swift.String, campaignId: Swift.String)
+  @objc public func gifCompletedAdAnalytics(adId: Swift.String, campaignId: Swift.String)
+  @objc public func notificationClearedAdAnalytics(adId: Swift.String, campaignId: Swift.String)
+  @objc public func notificationOptedOutAdAnalytics(adId: Swift.String, campaignId: Swift.String)
+  @objc deinit
+}
+public struct CompressionLevel : Swift.RawRepresentable {
+  public let rawValue: Swift.Int32
+  public static let noCompression: DigitalReefSDK.CompressionLevel
+  public static let bestSpeed: DigitalReefSDK.CompressionLevel
+  public static let bestCompression: DigitalReefSDK.CompressionLevel
+  public static let defaultCompression: DigitalReefSDK.CompressionLevel
+  public init(rawValue: Swift.Int32)
+  public init(_ rawValue: Swift.Int32)
+  public typealias RawValue = Swift.Int32
+}
+public struct GzipError : Swift.Error {
+  public enum Kind : Swift.Equatable {
+    case stream
+    case data
+    case memory
+    case buffer
+    case version
+    case unknown(code: Swift.Int)
+    public static func == (a: DigitalReefSDK.GzipError.Kind, b: DigitalReefSDK.GzipError.Kind) -> Swift.Bool
+  }
+  public let kind: DigitalReefSDK.GzipError.Kind
+  public let message: Swift.String
+  public var localizedDescription: Swift.String {
+    get
+  }
+}
+extension Foundation.Data {
+  public var isGzipped: Swift.Bool {
+    get
+  }
+  public func gzipped(level: DigitalReefSDK.CompressionLevel = .defaultCompression) throws -> Foundation.Data
+  public func gunzipped() throws -> Foundation.Data
+}
+@objc @_inheritsConvenienceInitializers @objcMembers @_Concurrency.MainActor @preconcurrency public class AdLoader : UIKit.UIViewController {
+  @objc @_Concurrency.MainActor @preconcurrency final public let activityIndicatorView: UIKit.UIActivityIndicatorView
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc @_Concurrency.MainActor @preconcurrency public func closeAdLoader()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public typealias InAppMessageData = [Swift.AnyHashable : Any]
+@objc final public class LocalInAppMessage : ObjectiveC.NSObject {
+  public init(_ model: DigitalReefSDK.DRInAppModel)
+  final public func show(window: UIKit.UIWindow?, _ completion: (() -> Swift.Void)?)
+  final public func closeEngagementAd()
+  @objc deinit
+}
+@objc @objcMembers public class AdEvents : ObjectiveC.NSObject {
+  @objc public init(key: Swift.String, value: Any)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class GzManager : ObjectiveC.NSObject {
+  @objc public static let shared: DigitalReefSDK.GzManager
+  @objc public func gzipped(dataToBeCompressed: Foundation.Data)
+  @objc public func gunzippedDictionary(dataContent: Swift.String) -> Foundation.NSDictionary?
+  @objc deinit
+}
+public struct Ad : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DRNotificationHandler : ObjectiveC.NSObject {
+  @objc public static let shared: DigitalReefSDK.DRNotificationHandler
+  @objc public var engagementPushClicked: Swift.Bool
+  @objc public var engagementInAppOpened: Swift.Bool
+  @objc public var adIsAppearing: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public func syncOptedOutAds()
+  @objc public func syncClearedAds()
+  @objc public func getEngagementAdOptInStatus() -> Swift.Bool
+  @objc public func getMonetizationAdOptInStatus() -> Swift.Bool
+  @objc public func logToSDK(msg: Swift.String)
+  @objc public func removeAdFromDB(adId: Swift.String, campaignId: Swift.String)
+  @objc public func checkSameOrNot(org: Swift.String?) -> Swift.Bool
+  @objc public func addAdtoDB(adSourceType: Swift.String, purposeType: Swift.String) -> Swift.Bool
+  @objc public func getOptInType() -> Swift.String
+  public func showInAppMessages()
+  public func updateOnlyInAppAdShownInDB(_ id: Swift.String, completion: (() -> Swift.Void)? = nil)
+  public func checkInAppAdExists(_ id: Swift.String, adId: Swift.String) -> Swift.Bool
+  public func showPushClickedInAppMessages(_ id: Swift.String)
+  public func deleteAllInAppMessages()
+  @objc deinit
+}
+extension DigitalReefSDK.DRNotificationHandler {
+  @objc dynamic public func requestPermission()
+  @objc dynamic public func didReceiveAPNSToken(_ token: Swift.String)
+  @objc dynamic public func willPresentNotification(_ notification: UserNotifications.UNNotification)
+  @objc dynamic public func didReceiveRemoteNotification(_ info: Foundation.NSDictionary)
+  @objc dynamic public func didReceiveNotificationResponse(_ response: UserNotifications.UNNotificationResponse)
+  @objc dynamic public func alertReceived(_ info: Foundation.NSDictionary, adId: Swift.String, completion: (() -> Swift.Void)?)
+}
+@_hasMissingDesignatedInitializers public class Logs {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class LocalLogs {
+  public static var shared: DigitalReefSDK.LocalLogs
+  @objc deinit
+}
+extension Foundation.NSNotification.Name {
+  public static let didUpdateIDFA: Foundation.Notification.Name
+  public static let updateCurrentSeekTime: Foundation.Notification.Name
+}
+@_hasMissingDesignatedInitializers public class RealmManager {
+  @objc deinit
+}
+
+@objc @_inheritsConvenienceInitializers @objcMembers @_Concurrency.MainActor @preconcurrency public class CustomNav : UIKit.UINavigationController {
+  @objc @_Concurrency.MainActor @preconcurrency public var viewWasLoaded: (() -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var shouldAutorotate: Swift.Bool {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var preferredInterfaceOrientationForPresentation: UIKit.UIInterfaceOrientation {
+    @objc get
+  }
+  @available(iOS 5.0, *)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(rootViewController: UIKit.UIViewController)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct LocationSP : Swift.Codable, Swift.Identifiable {
+  public let id: Foundation.UUID
+  public typealias ID = Foundation.UUID
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers @_Concurrency.MainActor @preconcurrency public class UIVideoView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public var videoHeight: CoreFoundation.CGFloat?
+  @objc @_Concurrency.MainActor @preconcurrency public var adType: Swift.String?
+  @objc @_Concurrency.MainActor @preconcurrency public var adId: Swift.String?
+  @objc @_Concurrency.MainActor @preconcurrency public var campaignId: Swift.String?
+  @objc @_Concurrency.MainActor @preconcurrency public var player: AVFoundation.AVPlayer?
+  @objc @_Concurrency.MainActor @preconcurrency public var playerLayer: AVFoundation.AVPlayerLayer?
+  @_Concurrency.MainActor @preconcurrency public var ad: DigitalReefSDK.Ad?
+  @objc @_Concurrency.MainActor @preconcurrency public var videoUrl: Foundation.URL?
+  @objc @_Concurrency.MainActor @preconcurrency public var fullScreenVideo: Swift.Bool
+  @objc @_Concurrency.MainActor @preconcurrency public var top: UIKit.NSLayoutConstraint?
+  @objc @_Concurrency.MainActor @preconcurrency public var bottom: UIKit.NSLayoutConstraint?
+  @objc @_Concurrency.MainActor @preconcurrency public var trailing: UIKit.NSLayoutConstraint?
+  @objc @_Concurrency.MainActor @preconcurrency public var leading: UIKit.NSLayoutConstraint?
+  @objc @_Concurrency.MainActor @preconcurrency public var imageAndVideoContainer: UIKit.UIView?
+  @objc @_Concurrency.MainActor @preconcurrency public var backgroundImg: UIKit.UIImageView?
+  @objc @_Concurrency.MainActor @preconcurrency public var playerItem: AVFoundation.AVPlayerItem?
+  @objc @_Concurrency.MainActor @preconcurrency public var videoWatchedSeconds: Swift.String
+  @_Concurrency.MainActor @preconcurrency public var totalVideoLength: Swift.Float64?
+  @_Concurrency.MainActor @preconcurrency public var videoPercentage: Swift.Double?
+  @objc @_Concurrency.MainActor @preconcurrency public var videoEnded: Swift.Bool
+  @objc @_Concurrency.MainActor @preconcurrency public var videoFormatFullOrPartial: Swift.Bool
+  @objc @_Concurrency.MainActor @preconcurrency public var avAsset: AVFoundation.AVAsset?
+  @objc @_Concurrency.MainActor @preconcurrency public var mainWindow: UIKit.UIWindow?
+  @objc @_Concurrency.MainActor @preconcurrency final public let activityIndicatorView: UIKit.UIActivityIndicatorView
+  @objc @_Concurrency.MainActor @preconcurrency final public let currentTimeLabel: UIKit.UILabel
+  @objc @_Concurrency.MainActor @preconcurrency final public let videoLengthLabel: UIKit.UILabel
+  @objc @_Concurrency.MainActor @preconcurrency public var isPlaying: Swift.Bool
+  @objc @_Concurrency.MainActor @preconcurrency public func setPauseIcon()
+  @objc @_Concurrency.MainActor @preconcurrency public func setPlayIcon()
+  @objc @_Concurrency.MainActor @preconcurrency public func setSoundIcon()
+  @objc @_Concurrency.MainActor @preconcurrency public func setMuteIcon()
+  @objc @_Concurrency.MainActor @preconcurrency public var isMuted: Swift.Bool
+  @objc @_Concurrency.MainActor @preconcurrency convenience public init(mainWindow: UIKit.UIWindow, frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+  @objc @_Concurrency.MainActor @preconcurrency public func setVolumeIcon()
+  @objc @_Concurrency.MainActor @preconcurrency public func playVideo(videoUrl url: Foundation.URL, videoAsset avAsset: AVFoundation.AVAsset?, image imageView: UIKit.UIImageView?, fullScrnMode fullScreenMode: Swift.Bool, muted videoMuted: Swift.Bool, videoFrmtFull videoFormatFull: Swift.Bool, adId adIdInfo: Swift.String, campaignId campaignIdInfo: Swift.String, adType adTypeInfo: Swift.String, height videoHeight: CoreFoundation.CGFloat, imgAndVidContainer imageAndVideoContainer: UIKit.UIView)
+  @objc @_Concurrency.MainActor @preconcurrency public func pauseVideo(pauseOnly: Swift.Bool = false)
+  @objc @_Concurrency.MainActor @preconcurrency public func playVideo()
+  @objc @_Concurrency.MainActor @preconcurrency public func stopVideo()
+  @objc @_Concurrency.MainActor @preconcurrency public func closeFullScreen()
+  @objc deinit
+}
+public struct InAppContent : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension UIKit.UIImageView {
+  @_Concurrency.MainActor @preconcurrency public func loadGif(name: Swift.String)
+  @available(iOS 9.0, *)
+  @_Concurrency.MainActor @preconcurrency public func loadGif(asset: Swift.String)
+}
+@objc extension UIKit.UIImage {
+  @objc dynamic public class func gifForObjc(data: Foundation.Data, scale: CoreFoundation.CGFloat) -> UIKit.UIImage?
+}
+extension UIKit.UIImage {
+  public class func gif(url: Foundation.URL) -> (UIKit.UIImage?, Foundation.TimeInterval)
+  public class func gif(data: Foundation.Data) -> (UIKit.UIImage?, Foundation.TimeInterval)
+  public class func gif(url: Swift.String) -> (UIKit.UIImage?, Foundation.TimeInterval)
+  public class func gif(name: Swift.String) -> (UIKit.UIImage?, Foundation.TimeInterval)
+  @available(iOS 9.0, *)
+  public class func gif(asset: Swift.String) -> (UIKit.UIImage?, Foundation.TimeInterval)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class DRInAppModel : ObjectiveC.NSObject {
+  @objc public var type: Swift.String
+  @objc public var backgroundURL: Swift.String
+  @objc public var backgroundColor: Swift.String
+  @objc public var themeColor: Swift.String
+  @objc public var closeButtonPosition: Swift.String
+  @objc public var adId: Swift.String
+  @objc public var campaignId: Swift.String
+  @objc public var ctaActionType: Swift.String
+  @objc public var inAppContent: [Foundation.NSDictionary]
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Reachability {
+  public static func isConnected() -> Swift.Bool
+  @objc deinit
+}
+@objc public protocol OTAObserver {
+  @objc func received(otaPromotion: DigitalReefSDK.OTAPromotion)
+  @objc func receivedAction(otaPromotionId: Swift.String, otaEvent: DigitalReefSDK.OTAEvent)
+}
+@objc public enum OTAEvent : Swift.Int {
+  case VIEWED = 1
+  case CLICK = 2
+  case CLOSED_NOTIFICATION = 3
+  case ERROR = 4
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc public class OTAPromotion : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var id: Swift.String
+  @objc public var actionUrl: Swift.String
+  @objc public var actionType: Swift.String
+  @objc public var category: Swift.String
+  @objc public var actionId: Swift.String
+  @objc public var otaNotification: DigitalReefSDK.OtaNotification
+  @objc public var createdAt: Swift.Int
+  @objc public var startedAt: Swift.Int
+  @objc public var finalizedAt: Swift.Int
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers @objc public class OtaNotification : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var contentTitle: Swift.String
+  @objc public var contentText: Swift.String
+  @objc public var expandedIcon: Swift.String
+  @objc public var icon: Swift.String
+  @objc public var bigImage: Swift.String
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+extension UIKit.UIColor {
+  @objc convenience dynamic public init?(hex_ARGB: Swift.String)
+  @objc convenience dynamic public init?(hex_RGBA: Swift.String)
+}
+extension DigitalReefSDK.OTAEvent : Swift.Equatable {}
+extension DigitalReefSDK.OTAEvent : Swift.Hashable {}
+extension DigitalReefSDK.OTAEvent : Swift.RawRepresentable {}
