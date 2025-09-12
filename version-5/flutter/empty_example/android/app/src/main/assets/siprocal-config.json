@@ -1,0 +1,16 @@
+{
+  "organizationType": "static",
+  "organization": "Siprocal",
+  "organizationId": "65b90bd1680f9a006995b76f",
+  "timerTriggerConfig": 86400,
+  "timerTriggerDormant": 86400,
+  "orgSelection": "",
+  "version": 1,
+  "isSdkBuild": true,
+  "optInType": "I",
+  "fcmProjectId": "iu-android-sdk",
+  "fcmSenderId": "117519441630",
+  "fbRemoteProjectId": "iu-android-sdk",
+  "fbRemoteAPIKey": "AIzaSyAuiuXvkX3hbXTZv1q1KUh3PbvvTT2tb04",
+  "fbRemoteAppId": "1:117519441630:android:7962cb3d01ff3cc2"
+}

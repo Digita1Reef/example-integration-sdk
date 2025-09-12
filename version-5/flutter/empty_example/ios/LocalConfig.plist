@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>organization</key>
+		<string>Siprocal</string>
+		<key>organizationId</key>
+		<string>65b90bd1680f9a006995b76f</string>
+		<key>organizationType</key>
+		<string>static</string>
+		<key>orgSelection</key>
+		<string>HOST_APP</string>
+		<key>fallbackURL</key>
+		<string>https://sdk.digitalreef.com/v1/configs/remote</string>
+		<key>timerTriggerConfig</key>
+		<string>86400</string>
+		<key>version</key>
+		<string>2</string>
+		<key>buildType</key>
+		<string>SDK</string>
+		<key>fcmProjectId</key>
+		<string>iu-android-sdk</string>
+		<key>fcmSenderId</key>
+		<string>117519441630</string>
+		<key>fbRemoteProjectId</key>
+		<string>iu-android-sdk</string>
+		<key>fbRemoteAPIKey</key>
+		<string>AIzaSyAuiuXvkX3hbXTZv1q1KUh3PbvvTT2tb04</string>
+		<key>fbRemoteAppId</key>
+		<string>1:117519441630:android:7962cb3d01ff3cc2</string>
+	</dict>
+</plist>
