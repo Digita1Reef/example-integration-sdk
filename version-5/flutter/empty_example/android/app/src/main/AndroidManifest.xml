@@ -23,7 +23,7 @@
         android:name=".MainApplication"
         android:icon="@mipmap/ic_launcher">
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.empty_example.MainActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:taskAffinity=""
